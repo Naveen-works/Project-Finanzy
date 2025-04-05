@@ -1,6 +1,7 @@
-import { Box, useMediaQuery, useTheme } from '@mui/material';
-import { minimalContentHeight } from '@mui/x-data-grid/hooks/features/rows/gridRowsUtils';
-import React from 'react'
+import { Box, useMediaQuery} from '@mui/material';
+import DashRow1 from './DashRow1';
+import DashRow2 from './DashRow2';
+import DashRow3 from './DashRow3';
 
 const gridTemplateLargeScreens=`
     "a b c"
@@ -49,7 +50,7 @@ const gridTemplateSmallScreens=`
 `
 
 const Dashboard= () => {
-    const {palette} =useTheme();
+    
     const isAbove= useMediaQuery("(min-width:1200px)")
     return (
         <Box
@@ -67,16 +68,9 @@ const Dashboard= () => {
             gridAutoRows: "80px",
             gridTemplateAreas:gridTemplateSmallScreens
         }}>
-            <Box bgcolor="#fff"  gridArea="a"></Box>
-            <Box bgcolor="#fff"  gridArea="b"></Box>
-            <Box bgcolor="#fff"  gridArea="c"></Box>
-            <Box bgcolor="#fff"  gridArea="d"></Box>
-            <Box bgcolor="#fff"  gridArea="e"></Box>
-            <Box bgcolor="#fff"  gridArea="f"></Box>
-            <Box bgcolor="#fff"  gridArea="g"></Box>
-            <Box bgcolor="#fff"  gridArea="h"></Box>
-            <Box bgcolor="#fff"  gridArea="i"></Box>
-            <Box bgcolor="#fff"  gridArea="j"></Box>
+           <DashRow1/>
+           <DashRow2/>
+           <DashRow3/>
         </Box>
     )
 }

@@ -1,18 +1,24 @@
- 
- // eslint-disable-next-line
- import { Palette, PaletteColor} from "@mui/material/styles/createPalette";
 
+import { PaletteColorOptions } from "@mui/material";
 
- declare module "@mui/material/styles/createPalette"{
-    interface PaletteColor{
-        [key:number]:string;
-    }
+declare module "@mui/material/styles" {
+  interface PaletteColor {
+    [key: number]: string;
+  }
 
-    interface Palette{
-        tertiary:PaletteColor;
-    }
+  interface SimplePaletteColorOptions {
+    [key: number]: string;
+  }
 
-    interface PaletteOptions {
-        tertiary?: PaletteColor;
-      }
- }
+  interface Palette {
+    tertiary: PaletteColor;
+  }
+
+  interface PaletteOptions {
+    tertiary?: PaletteColorOptions;
+  }
+
+  interface TypeBackground {
+    light: string;
+  }
+}
