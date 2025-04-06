@@ -1,6 +1,4 @@
-
-    import DashboardBox from '@/components/DashboardBox'
-    
+import DashboardBox from '@/components/DashboardBox'
     
     const DashRow3 = () => {
         return (
