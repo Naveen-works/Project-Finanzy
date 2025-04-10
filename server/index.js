@@ -20,4 +20,11 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 
 
-console.log("Hey patrick");
+const PORT = process.env.PORT || 9000;
+
+mongoose.connect(process.env.MONGO_URL).then(async ()=>
+    {
+        app.listen(PORT,()=>console.log(`Server is running on ${PORT}`));
+    }).catch((error)=>{
+        console.log(`${error} did not connect`);
+    })
