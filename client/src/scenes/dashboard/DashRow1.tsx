@@ -21,7 +21,6 @@ import {
 const DashRow1 = () => {
   const { data } = useGetKpisQuery();
   const {palette} =useTheme();
-  console.groupCollapsed("Data :" , data);
   
   const revenueExpenses = useMemo(() => {
     if (!data || !data[0]) return [];
