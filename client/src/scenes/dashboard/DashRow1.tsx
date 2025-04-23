@@ -186,7 +186,7 @@ const DashRow1 = () => {
           <YAxis axisLine={false} tickLine={false} style={{fontSize:"10px"}} />
 
           <Tooltip />
-          <Legend />
+          
           <Bar dataKey="revenue" fill="url(#colorRevenue)" />
         </BarChart>
       </ResponsiveContainer>
