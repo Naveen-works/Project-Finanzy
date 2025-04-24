@@ -1,4 +1,3 @@
-
 import { PaletteColorOptions } from "@mui/material";
 
 declare module "@mui/material/styles" {
@@ -12,10 +11,14 @@ declare module "@mui/material/styles" {
 
   interface Palette {
     tertiary: PaletteColor;
+    skyblue: PaletteColor;
+    purple: PaletteColor;
   }
 
   interface PaletteOptions {
     tertiary?: PaletteColorOptions;
+    skyblue?: PaletteColorOptions;
+    purple?: PaletteColorOptions;
   }
 
   interface TypeBackground {

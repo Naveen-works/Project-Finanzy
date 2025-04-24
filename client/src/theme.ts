@@ -50,6 +50,17 @@ export const tokens = {
         800: "#1E40AF",
         900: "#1E3A8A"
     },
+    skyblue: {
+      100: "#e0f7ff",
+      200: "#b3ecff",
+      300: "#80dfff",
+      400: "#4dd2ff",
+      500: "#1ac6ff",
+      600: "#009fcc",
+      700: "#007799",
+      800: "#004f66",
+      900: "#002733",
+    },
     background: {
       light: "#2d2d34",
       main: "#1f2026",
@@ -70,6 +81,9 @@ export const tokens = {
       },
       tertiary: {
         ...tokens.tertiary,
+      },
+      skyblue: {
+        ...tokens.skyblue,
       },
       grey: {
         ...tokens.grey,

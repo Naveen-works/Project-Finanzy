@@ -23,7 +23,7 @@ const DashRow1 = () => {
   const {palette} =useTheme();
   
   const revenueExpenses = useMemo(() => {
-    if (!data || !data[0]) return [];
+    if (!data) return [];
 
     return data[0].monthlyData.map(({ month, revenue, expenses }) => ({
       name: month.substring(0, 3),
@@ -35,7 +35,7 @@ const DashRow1 = () => {
 
 
   const revenue = useMemo(() => {
-    if (!data || !data[0]) return [];
+    if (!data) return [];
 
     return data[0].monthlyData.map(({ month, revenue}) => ({
       name: month.substring(0, 3),
@@ -43,7 +43,7 @@ const DashRow1 = () => {
     }));
   }, [data]);
   const revenueProfit = useMemo(() => {
-    if (!data || !data[0]) return [];
+    if (!data) return [];
 
     return data[0].monthlyData.map(({ month, revenue, expenses }) => ({
       name: month.substring(0, 3),

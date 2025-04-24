@@ -32,7 +32,7 @@ const DashRow2 = () => {
   const pieColor = [palette.primary[800], palette.primary[300]];
 
   const operationalExpenses = useMemo(() => {
-    if (!operationalData || !operationalData[0]) return [];
+    if (!operationalData) return [];
 
     return operationalData[0].monthlyData.map(
       ({ month, operationalExpenses, nonOperationalExpenses }) => ({
